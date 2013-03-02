@@ -37,6 +37,14 @@ JavaScript is via meta tags in `<head>`, and query the DOM for these values.
 [:meta {:name "csrf_token" :content *anti-forgery-token*}]]
 ```
 
+Or if you are lazy just use the included helper function.
+
+```clojure
+(use 'ring.util.anti-forgery)
+
+(anti-forgery-metas)
+```
+
 The forgery token is also automatically added as a session parameter
 by the middleware. If the session parameter and the POST parameter
 don't match, then a 403 Forbidden response is returned. This ensures
