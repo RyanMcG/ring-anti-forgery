@@ -33,7 +33,7 @@ X-Anti-Forgery-Token. A common method for providing these values to your
 JavaScript is via meta tags in `<head>`, and query the DOM for these values.
 
 ```clojure
-[:meta {:name "csrf_header :content "X-Anti-Forgery-Token"}]
+[:meta {:name "csrf_header" :content "X-Anti-Forgery-Token"}]
 [:meta {:name "csrf_token" :content *anti-forgery-token*}]]
 ```
 
